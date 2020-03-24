@@ -10,3 +10,47 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.current-color {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 1rem;
+}
+
+.background-image {
+  background-image: url('./images/react.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border: 0;
+}
+
+.color-section {
+  width: 15rem;
+  text-align: center;
+}
+
+h3 {
+  width: 7rem;
+}
+
+.slider-Hue, .slider-Saturation, .slider-Light, .slider-Alpha {
+  width: 12rem;
+  margin-left: auto;
+}
+
+article {
+  display: flex;
+}
+
+h4 {
+  font-weight: 300;
+}
