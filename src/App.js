@@ -6,7 +6,7 @@ const App = () => {
   const [light, setLight] = useState(Math.floor(Math.random() * 100))
   const [alpha, setAlpha] = useState(1)
   const [bgColor, setBackGroundColor] = useState(
-    `hsla(${hue},${saturation}%,${light}%,${alpha})`
+    `${hue},${saturation}%,${light}%,${alpha}`
   )
 
   const updateHue = (e) => {
@@ -36,7 +36,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    const newColor = `hsla(${hue},${saturation}%,${light}%,${alpha})`
+    const newColor = `${hue},${saturation}%,${light}%,${alpha}`
     setBackGroundColor(newColor)
   }, [hue, saturation, light, alpha])
 
@@ -48,11 +48,11 @@ const App = () => {
           <input
             className="current-color"
             style={{
-              backgroundColor: { bgColor },
+              backgroundColor: `hsla(${bgColor})`,
             }}
           ></input>
           <input className="background-image"></input>
-          <h4>{bgColor}</h4>
+          <h4>hsla({bgColor})</h4>
           <button className="random-button" onClick={newRandomColor}>
             Random Color
           </button>
